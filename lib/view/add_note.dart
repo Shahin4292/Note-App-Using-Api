@@ -10,7 +10,7 @@ class AddNote extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blueGrey,
+      backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: Colors.pinkAccent,
         centerTitle: true,
@@ -47,7 +47,9 @@ class AddNote extends StatelessWidget {
                   backgroundColor: Colors.pinkAccent,
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(12))),
-              onPressed: () {},
+              onPressed: () {
+                noteController.addNote();
+              },
               child: const Text(
                 "Save",
                 style: TextStyle(
