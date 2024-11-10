@@ -49,6 +49,9 @@ class AddNote extends StatelessWidget {
                       borderRadius: BorderRadius.circular(12))),
               onPressed: () {
                 noteController.addNote();
+                if(noteController.title.text != "" || noteController.description.text != ""){
+                  Get.back();
+                }
               },
               child: const Text(
                 "Save",

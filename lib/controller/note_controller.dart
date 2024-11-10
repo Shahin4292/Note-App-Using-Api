@@ -52,5 +52,9 @@ class NoteController extends GetxController {
   Future<void> deleteNote(String id) async {
     var newUrl = "https://673012ed66e42ceaf15f4989.mockapi.io/note/$id";
     final response = await http.delete(Uri.parse(newUrl));
+    if (response.statusCode == 200) {
+      print("delete Note");
+      getNote();
+    }
   }
 }

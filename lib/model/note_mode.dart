@@ -9,18 +9,18 @@ List<NoteModel> noteModelFromJson(String str) => List<NoteModel>.from(json.decod
 String noteModelToJson(List<NoteModel> data) => json.encode(List<dynamic>.from(data.map((x) => x.toJson())));
 
 class NoteModel {
-  String title;
-  String description;
-  String date;
-  String time;
-  String id;
+  String? title;
+  String? description;
+  String? date;
+  String? time;
+  String? id;
 
   NoteModel({
-    required this.title,
-    required this.description,
-    required this.date,
-    required this.time,
-    required this.id,
+  this.title,
+  this.description,
+  this.date,
+  this.time,
+  this.id,
   });
 
   factory NoteModel.fromJson(Map<String, dynamic> json) => NoteModel(
