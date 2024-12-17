@@ -40,6 +40,7 @@ class AddNote extends StatelessWidget {
                   border: InputBorder.none,
                   hintText: "description",
                   hintStyle: TextStyle(fontSize: 20)),
+
             ),
             ElevatedButton(
               style: ElevatedButton.styleFrom(
